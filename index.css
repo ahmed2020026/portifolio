@@ -185,8 +185,8 @@ nav ul li a i {
 }
 
 .iconMenu {
-    width: 29px;
-    height: 26px;
+    width: 26px;
+    height: 24px;
     display: none;
     font-size: 24px;
     color: var(--text-color);
@@ -224,7 +224,7 @@ nav ul li a i {
     background-color: #fff;
 
     &:first-of-type {
-        transform: translateY(13px)rotateZ(45deg);
+        transform: translateY(10px)rotateZ(45deg);
     }
 
     &:nth-of-type(2) {
@@ -234,7 +234,7 @@ nav ul li a i {
     }
 
     &:last-of-type {
-        transform: translateY(-13px)rotateZ(-45deg);
+        transform: translateY(-11px)rotateZ(-45deg);
     }
 }
 
