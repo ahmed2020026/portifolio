@@ -23,22 +23,41 @@ const about = document.querySelector(".about");
 const skills = document.querySelector(".skills");
 const projects = document.querySelector(".projects");
 const contact = document.querySelector(".contact");
+const skill = document.querySelectorAll(".skill-category .skill-item");
 
 window.onload = function () {
     home.classList.add("section")
 }
+
+let complete = false;
+
 window.onscroll = function () {
     if (window.scrollY >= about.offsetTop - 200) {
         about.classList.add("section")
     }
     if (window.scrollY >= skills.offsetTop - 200) {
         skills.classList.add("section");
-        const skill = document.querySelectorAll(".skill-category .skill-item");
+        
+        
 
         skill.forEach((ele) => {
             const element = ele.querySelector(".progress");
             element.style.width = element.dataset.width;
-
+            const span = document.querySelectorAll(".skill-info")
+            if(!complete){
+                span.forEach(ele => {
+                    let R = ele.children[1].getAttribute("data-range");
+                    let c = 0;
+                    let range = setInterval(() => {
+                        c++;
+                        ele.children[1].innerHTML = `${c}%`
+                        if (c == R) {
+                            clearInterval(range);
+                            complete = true;
+                        }
+                    }, 10);
+                })
+            }
         })
     }
     if (window.scrollY >= skills.offsetTop - 200) {
