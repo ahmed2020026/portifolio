@@ -54,7 +54,7 @@ window.onscroll = function () {
 // Typed.js Animation
 document.addEventListener('DOMContentLoaded', function () {
     const typed = new Typed('.typed-text', {
-        strings: ['Front-End Developer', 'UI/UX Designer', 'React Developer'],
+        strings: ['Front-End Developer', 'React Developer'],
         typeSpeed: 50,
         backSpeed: 30,
         loop: true
