@@ -247,7 +247,7 @@ nav ul li a i {
 
     nav {
         position: fixed;
-        top: 0;
+        top: 100%;
         right: -100%;
         width: 300px;
         height: 100vh;
