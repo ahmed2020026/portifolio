@@ -11,7 +11,7 @@
 
 <body>
     <header>
-        <div class="container d-flex justify-between">
+        <div class="container d-flex justify-between items-center">
             <div class="logo">
                 <a href="#">Portfolio</a>
             </div>
@@ -20,12 +20,14 @@
                     <li><a href="#home"> Home</a></li>
                     <li><a href="#about"> About</a></li>
                     <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects"> Projects</a></li>
+                    <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
             <div class="iconMenu" id="menuToggle">
-                <i class="fas fa-bars"></i>
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </header>
@@ -37,12 +39,11 @@
                 <div class="person-info" style="--w : 60">
                     <h4>Hello, I'm</h4>
                     <h1>Ahmed Samir Mustafa</h1>
-                    <h2>I'm a <span class="typed-text"
-                            data-items="Front-End Developer,UI/UX Designer,React Developer"></span></h2>
+                    <h2>I'm a <span class="typed-text" data-items="Front-End Developer,UI/UX Designer,React Developer"></span></h2>
                     <p>I create responsive and interactive web interfaces using modern technologies like React, Tailwind
                         CSS, and Bootstrap.</p>
                     <div class="action-buttons">
-                        <a href="#contact" class="btn primary-btn">Hire Me</a>
+                        <a href="#contact" class="btn primary-btn">Contact Me</a>
                         <a href="#projects" class="btn secondary-btn">View Work</a>
                     </div>
                 </div>
@@ -67,8 +68,10 @@
                     </div>
                     <div class="about-info" style="--w: 60">
                         <h3>Front-End Developer</h3>
-                        <p>I am a passionate front-end developer with 2+ years of experience creating modern web
-                            applications. My expertise includes React.js, JavaScript, and responsive design principles.
+                        <p>Frond-End Developer with a strong passion for transforming creative ideas into engaging and seamless web user
+                        interface.I have established a solid foundation in JavaScript & modern framework like React, along with libraries such
+                        as jQuery & mastered HTML5, CSS3 and CSS frameworks like tailwind CSS and Bootstrap.l believe in the importance of
+                        continuous learning and always seeking to explore the latest technologies and best practices in web development
                         </p>
                         <div class="personal-info">
                             <div class="info-item">
@@ -77,11 +80,7 @@
                             </div>
                             <div class="info-item">
                                 <span>Email:</span>
-                                <p>ahmed.samir@example.com</p>
-                            </div>
-                            <div class="info-item">
-                                <span>Experience:</span>
-                                <p>2+ Years</p>
+                                <p>a7m98e60d20018.had@gmail.com</p>
                             </div>
                             <div class="info-item">
                                 <span>Freelance:</span>
@@ -103,14 +102,22 @@
                 </div>
                 <div class="skills-content">
                     <div class="skill-category">
-                        <h3>Frontend</h3>
                         <div class="skill-item">
                             <div class="skill-info">
-                                <span>HTML/CSS</span>
+                                <span>HTML</span>
                                 <span>95%</span>
                             </div>
                             <div class="progress-bar">
-                                <div class="progress" style="width: 95%"></div>
+                                <div class="progress" style="width: 0 ; transition : 0.5s" data-width = "95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>CSS</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 0 ; transition : 0.5s" data-width = "95%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
@@ -119,7 +126,7 @@
                                 <span>85%</span>
                             </div>
                             <div class="progress-bar">
-                                <div class="progress" style="width: 85%"></div>
+                                <div class="progress" style="width: 0 ; transition : 0.5s" data-width = "85%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
@@ -128,28 +135,35 @@
                                 <span>80%</span>
                             </div>
                             <div class="progress-bar">
-                                <div class="progress" style="width: 80%"></div>
+                                <div class="progress" style="width: 0 ; transition : 0.5s" data-width="80%">%</div>
                             </div>
                         </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Backend</h3>
+                    
                         <div class="skill-item">
                             <div class="skill-info">
-                                <span>Node.js</span>
+                                <span>Bootstrap</span>
                                 <span>70%</span>
                             </div>
                             <div class="progress-bar">
-                                <div class="progress" style="width: 70%"></div>
+                                <div class="progress" style="width: 0 ; transition : 0.5s" data-width = "70%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
                             <div class="skill-info">
-                                <span>Express</span>
+                                <span>tailwind CSS</span>
                                 <span>65%</span>
                             </div>
                             <div class="progress-bar">
-                                <div class="progress" style="width: 65%"></div>
+                                <div class="progress" style="width: 0 ; transition : 0.5s" data-width = "65%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>jQuery</span>
+                                <span>65%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 0 ; transition : 0.5s" data-width = "65%"></div>
                             </div>
                         </div>
                     </div>
@@ -167,30 +181,56 @@
                 <div class="projects-grid">
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="https://via.placeholder.com/400x250" alt="Project 1">
+                            <img src="./e-commerce.png" alt="Project 1">
                         </div>
                         <div class="project-info">
                             <h3>E-commerce Website</h3>
-                            <p>Full-featured online store built with React and Node.js</p>
                             <div class="project-tech">
-                                <span>React</span>
-                                <span>Node.js</span>
-                                <span>MongoDB</span>
+                                <span>Html</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
                             </div>
                             <a href="#" class="btn secondary-btn">View Project</a>
                         </div>
                     </div>
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="https://via.placeholder.com/400x250" alt="Project 2">
+                            <img src="./res.png" alt="Project 1">
                         </div>
                         <div class="project-info">
-                            <h3>Portfolio Template</h3>
-                            <p>Responsive portfolio template with modern design</p>
+                            <h3>Resturant Website</h3>
+                            <div class="project-tech">
+                                <span>Html</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>Bootstrap</span>
+                            </div>
+                            <a href="#" class="btn secondary-btn">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="./bien.png" alt="Project 2">
+                        </div>
+                        <div class="project-info">
+                            <h3>Bein Sport website</h3>
                             <div class="project-tech">
                                 <span>HTML</span>
                                 <span>CSS</span>
                                 <span>JavaScript</span>
+                                <span>Bootstrap</span>
+                            </div>
+                            <a href="#" class="btn secondary-btn">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="./react.png" alt="Project 2">
+                        </div>
+                        <div class="project-info">
+                            <h3>Rent Up website</h3>
+                            <div class="project-tech">
+                                <span>React</span>
                             </div>
                             <a href="#" class="btn secondary-btn">View Project</a>
                         </div>
@@ -208,25 +248,23 @@
                 </div>
                 <div class="contact-content d-flex">
                     <div class="contact-info" style="--w: 40">
-                        <h3>Get In Touch</h3>
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
                             <div>
                                 <h4>Email</h4>
-                                <p>ahmed.samir@example.com</p>
+                                <p>a7m98e60d20018.had@gmail.com</p>
                             </div>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-phone"></i>
                             <div>
                                 <h4>Phone</h4>
-                                <p>+20 123 456 7890</p>
+                                <p>01063483113</p>
                             </div>
                         </div>
                         <div class="social-links">
                             <a href="#"><i class="fab fa-github"></i></a>
                             <a href="#"><i class="fab fa-linkedin"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
                             <a href="#"><i class="fab fa-facebook"></i></a>
                         </div>
                     </div>
@@ -259,47 +297,7 @@
     </footer>
 
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script>
-        // Mobile Menu Toggle
-        const menuToggle = document.getElementById('menuToggle');
-        const menu = document.getElementById('menu');
-
-        menuToggle.addEventListener('click', () => {
-            menu.classList.toggle('active');
-            menuToggle.classList.toggle('active');
-        });
-
-        // Close menu when clicking on a link
-        const navLinks = document.querySelectorAll('nav ul li a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth <= 992) {
-                    menu.classList.remove('active');
-                    menuToggle.classList.remove('active');
-                }
-            });
-        });
-
-        // Typed.js Animation
-        document.addEventListener('DOMContentLoaded', function () {
-            const typed = new Typed('.typed-text', {
-                strings: ['Front-End Developer', 'UI/UX Designer', 'React Developer'],
-                typeSpeed: 50,
-                backSpeed: 30,
-                loop: true
-            });
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    <script src="./index.js"></script>
 </body>
 
 </html>

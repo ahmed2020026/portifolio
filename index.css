@@ -76,7 +76,6 @@ body {
 
 .primary-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
 }
 
 .secondary-btn {
@@ -107,6 +106,12 @@ body {
     color: transparent;
 }
 
+@media (max-width:992px) {
+    .section-title h2 {
+        font-size: 30px;
+    }
+}
+
 .underline {
     width: 80px;
     height: 4px;
@@ -115,6 +120,14 @@ body {
     border-radius: 2px;
 }
 
+section {
+    opacity: 0;
+    transition: 2s;
+}
+
+section.section {
+    opacity: 1;
+}
 /* ================>>> Header <<<================ */
 header {
     width: 100%;
@@ -164,7 +177,7 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a.active {
-    color: white;
+    color: var(--primary-color);
 }
 
 nav ul li a i {
@@ -172,17 +185,59 @@ nav ul li a i {
 }
 
 .iconMenu {
+    width: 35px;
+    height: 30px;
     display: none;
     font-size: 24px;
     color: var(--text-color);
     cursor: pointer;
     transition: var(--transition);
     z-index: 1001;
+    position: relative;
 }
 
-.iconMenu:hover {
-    color: var(--primary-color);
+.iconMenu span {
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    background-color: #fff;
+    transition: var(--transition);
+
+    &:first-of-type {
+        top: 0;
+    }
+
+    &:nth-of-type(2) {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &:last-of-type {
+        bottom: 0;
+    }
 }
+
+.open span {
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    background-color: #fff;
+
+    &:first-of-type {
+        transform: translateY(13px)rotateZ(45deg);
+    }
+
+    &:nth-of-type(2) {
+        top: 50%;
+        transform: translateY(-50%);
+        display: none;
+    }
+
+    &:last-of-type {
+        transform: translateY(-13px)rotateZ(-45deg);
+    }
+}
+
 
 /* Mobile Menu */
 @media (max-width: 992px) {
@@ -258,7 +313,6 @@ nav ul li a i {
 .person-info h2 {
     font-size: 32px;
     font-weight: 600;
-    margin-bottom: 20px;
     color: var(--gray-color);
 }
 
@@ -299,6 +353,46 @@ nav ul li a i {
     border: 5px solid var(--body-color);
 }
 
+@media (max-width: 992px) {
+    .home {
+        padding-top: 114px;
+    }
+
+    .home .container {
+        flex-direction: column-reverse;
+    }
+
+    .person-info {
+        width: 100% !important;
+        text-align: center;
+
+        p {
+            margin: 25px auto;
+        }
+
+        h1 {
+            font-size: 30px;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+    }
+
+    .person-image {
+        margin-top: 50px;
+        width: 100% !important;
+        text-align: center;
+    }
+}
+
+@media (max-width:768px) {
+    .person-image .image-wrapper {
+        width: 280px;
+        height: 280px;
+    }
+}
+
 /* ================>>> About Section <<<================ */
 .about-content {
     gap: 40px;
@@ -325,43 +419,54 @@ nav ul li a i {
     margin-bottom: 20px;
 }
 
-.about-info p {
-    margin-bottom: 25px;
-    color: var(--gray-color);
+.personal-info {
+    margin: 25px 0;
 }
 
-.personal-info {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    margin-bottom: 30px;
+.about-info p {
+    color: var(--gray-color);
 }
 
 .info-item {
     display: flex;
-    gap: 10px;
 }
 
 .info-item span {
     font-weight: 600;
     color: var(--primary-color);
+    margin-right: 25px;
 }
 
+@media (max-width: 992px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-image,
+    .about-info {
+        width: 100% !important;
+    }
+}
+
+
 /* ================>>> Skills Section <<<================ */
-.skills-content {
+
+.skills-content .skill-category {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .skills-content .skill-category {
+        grid-template-columns: 1fr;
+    }
 }
 
 .skill-category h3 {
     font-size: 20px;
     margin-bottom: 20px;
     color: var(--primary-color);
-}
-
-.skill-item {
-    margin-bottom: 20px;
 }
 
 .skill-info {
@@ -448,6 +553,12 @@ nav ul li a i {
     font-size: 12px;
 }
 
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* ================>>> Contact Section <<<================ */
 .contact-content {
     gap: 40px;
@@ -496,11 +607,12 @@ nav ul li a i {
     align-items: center;
     justify-content: center;
     transition: var(--transition);
+    color: var(--gray-color);
 }
 
 .social-links a:hover {
-    background-color: var(--primary-color);
     transform: translateY(-5px);
+    color: var(--primary-color);
 }
 
 .contact-form {
@@ -534,6 +646,24 @@ nav ul li a i {
     min-height: 120px;
 }
 
+@media (max-width: 992px) {
+
+    .contact-info,
+    .contact-form {
+        width: 100% !important;
+    }
+
+    .contact-content {
+        flex-direction: column;
+    }
+}
+
+@media (max-width:768px) {
+    .social-links {
+        justify-content: center;
+    }
+}
+
 /* ================>>> Footer <<<================ */
 footer {
     background-color: rgba(15, 5, 30, 0.9);
@@ -547,55 +677,3 @@ footer p {
 }
 
 /* ================>>> Responsive Design <<<================ */
-@media (max-width: 992px) {
-
-    .home .container,
-    .about-content,
-    .contact-content {
-        flex-direction: column;
-    }
-
-    .person-info,
-    .person-image,
-    .about-image,
-    .about-info,
-    .contact-info,
-    .contact-form {
-        width: 100% !important;
-    }
-
-    .person-image {
-        margin-top: 50px;
-    }
-
-    .person-info h1 {
-        font-size: 36px;
-    }
-
-    .person-info h2 {
-        font-size: 24px;
-    }
-
-    .skills-content {
-        grid-template-columns: 1fr;
-    }
-
-    .section-title h2 {
-        font-size: 30px;
-    }
-}
-
-@media (max-width: 768px) {
-    .personal-info {
-        grid-template-columns: 1fr;
-    }
-
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .person-image .image-wrapper {
-        width: 280px;
-        height: 280px;
-    }
-}
