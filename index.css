@@ -122,7 +122,7 @@ body {
 
 section {
     opacity: 0;
-    transition: 2s;
+    transition: var(--transition);
 }
 
 section.section {
