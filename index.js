@@ -32,10 +32,10 @@ window.onload = function () {
 
 
 window.onscroll = function () {
-    if (window.scrollY >= about.offsetTop - 200) {
+    if (window.scrollY >= about.offsetTop - 400) {
         about.classList.add("section")
     }
-    if (window.scrollY >= skills.offsetTop - 200) {
+    if (window.scrollY >= skills.offsetTop - 400) {
         skills.classList.add("section");
 
         skill.forEach((ele) => {
@@ -56,10 +56,10 @@ window.onscroll = function () {
             }
         });
     }
-    if (window.scrollY >= projects.offsetTop - 200) {
+    if (window.scrollY >= projects.offsetTop - 400) {
         projects.classList.add("section")
     }
-    if (window.scrollY >= contact.offsetTop - 200) {
+    if (window.scrollY >= contact.offsetTop - 400) {
         contact.classList.add("section")
     }
 }
