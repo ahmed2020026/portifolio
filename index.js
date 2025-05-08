@@ -26,7 +26,8 @@ const contact = document.querySelector(".contact");
 const skill = document.querySelectorAll(".skill-category .skill-item");
 
 window.onload = function () {
-    home.classList.add("section")
+    home.classList.add("section");
+    window.scrollTo(0,0)
 }
 
 
