@@ -129,6 +129,7 @@ section {
 section.section {
     animation: slide 1s ease forwards 0.5s;
 }
+
 /* ================>>> Header <<<================ */
 header {
     width: 100%;
@@ -164,6 +165,34 @@ header.scrolled {
 nav ul {
     display: flex;
     gap: 20px;
+}
+
+nav ul li {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 0%;
+        height: 3px;
+        background-color: var(--primary-color);
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 15px;
+        transition: var(--transition);
+    }
+
+    &:hover,
+    &.active {
+        a {
+            color: var(--primary-color);
+        }
+
+        &::before {
+            width: 80%;
+        }
+    }
 }
 
 nav ul li a {
@@ -260,6 +289,20 @@ nav ul li a i {
 
     nav.active {
         right: 0;
+    }
+
+    nav ul li {
+        &:hover,
+        &.active {
+            a {
+                color: var(--primary-color);
+                background: rgba(37, 99, 235, 0.2);
+                padding-left: 25px;
+            }
+            &::before {
+                content: none;
+            }
+        }
     }
 
     nav ul {
@@ -690,6 +733,7 @@ footer p {
         transform: translateY(0);
     }
 }
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -699,5 +743,3 @@ footer p {
         opacity: 1;
     }
 }
-
-

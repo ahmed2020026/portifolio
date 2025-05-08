@@ -25,18 +25,32 @@ const projects = document.querySelector(".projects");
 const contact = document.querySelector(".contact");
 const skill = document.querySelectorAll(".skill-category .skill-item");
 
+const navs = document.querySelectorAll("nav ul li");
+
+
 window.onload = function () {
     home.classList.add("section");
-    window.scrollTo(0,0)
+    window.scrollTo(0, 0);
+    navs.forEach(nav => nav.classList.remove("active"))
+    navs[0].classList.add("active");
 }
 
 
 window.onscroll = function () {
+    if (window.scrollY >= home.offsetTop - 400) {
+        home.classList.add("section");
+        navs.forEach(nav => nav.classList.remove("active"))
+        navs[0].classList.add("active");
+    }
     if (window.scrollY >= about.offsetTop - 400) {
-        about.classList.add("section")
+        about.classList.add("section");
+        navs.forEach(nav => nav.classList.remove("active"))
+        navs[1].classList.add("active");
     }
     if (window.scrollY >= skills.offsetTop - 400) {
         skills.classList.add("section");
+        navs.forEach(nav => nav.classList.remove("active"))
+        navs[2].classList.add("active")
 
         skill.forEach((ele) => {
             const element = ele.querySelector(".progress");
@@ -57,10 +71,14 @@ window.onscroll = function () {
         });
     }
     if (window.scrollY >= projects.offsetTop - 400) {
-        projects.classList.add("section")
+        projects.classList.add("section");
+        navs.forEach(nav => nav.classList.remove("active"))
+        navs[3].classList.add("active")
     }
     if (window.scrollY >= contact.offsetTop - 400) {
-        contact.classList.add("section")
+        contact.classList.add("section");
+        navs.forEach(nav => nav.classList.remove("active"))
+        navs[4].classList.add("active")
     }
 }
 
