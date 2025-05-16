@@ -120,16 +120,6 @@ body {
     border-radius: 2px;
 }
 
-section {
-    opacity: 0;
-    transition: 1s linear;
-    transform: translateY(50px);
-}
-
-section.section {
-    animation: slide 1s ease forwards 0.5s;
-}
-
 /* ================>>> Header <<<================ */
 header {
     width: 100%;
@@ -292,6 +282,7 @@ nav ul li a i {
     }
 
     nav ul li {
+
         &:hover,
         &.active {
             a {
@@ -299,6 +290,7 @@ nav ul li a i {
                 background: rgba(37, 99, 235, 0.2);
                 padding-left: 25px;
             }
+
             &::before {
                 content: none;
             }
@@ -720,12 +712,10 @@ footer p {
 }
 
 /* ================>>> Animation Design <<<================ */
-
-
-@keyframes slide {
+@keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(50px);
+        transform: translateY(30px);
     }
 
     to {
@@ -734,12 +724,30 @@ footer p {
     }
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
+.section {
+    opacity: 0;
+}
 
-    to {
-        opacity: 1;
-    }
+.section.animated {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.section:nth-child(1).animated {
+    animation-delay: 0.1s;
+}
+
+.section:nth-child(2).animated {
+    animation-delay: 0.2s;
+}
+
+.section:nth-child(3).animated {
+    animation-delay: 0.3s;
+}
+
+.section:nth-child(4).animated {
+    animation-delay: 0.4s;
+}
+
+.section:nth-child(5).animated {
+    animation-delay: 0.5s;
 }
